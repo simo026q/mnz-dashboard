@@ -16,14 +16,7 @@ const colors = {
   grey950: "#FF020617"
 }
 
-const carLabels = {
-  TC1: {
-    cadillacvseriesrgtp: "GAIN"
-  },
-  TC2: {
-    cadillacvseriesrgtp: "SLIP"
-  }
-}
+const carLabels = JSON.parse(readtextfile('./DashTemplates/MNZ Dashboard v2/JavascriptExtensions/car_labels.json'));
 
 function getCarLabel(labelName) {
   if (carLabels.hasOwnProperty(labelName)) {
@@ -74,6 +67,13 @@ function extractDecimalPart(value, numOfDecimals) {
   const parts = String(value).split('.');
   const decimalPart = parts[1] || '';
   return decimalPart.substring(0, numOfDecimals).padEnd(numOfDecimals, '0');
+}
+
+function extractDecimalPartRounded(value, numOfDecimals) {
+  // toFixed() rounds the value
+  value = (+value).toFixed(numOfDecimals);
+  const parts = String(value).split('.');
+  return parts[1];
 }
 
 function getSessionTime() {

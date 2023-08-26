@@ -18,5 +18,14 @@
     "bmwlmdh": "SLIP",
     
     "dallarap217": "SLIP"
+  },
+  "SHPE": {
+    "audir8gt3": "MAP",
+    "ferrarievogt3": "MAP",
+    "bmwm4gt3": "MAP",
+    "lamborghinievogt3": "MAP",
+    "mclarenmp4": "MAP",
+    "mercedesamgevogt3": "MAP",
+    "porsche992rgt3": "MAP"
   }
 }
