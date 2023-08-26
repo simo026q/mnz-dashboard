@@ -3,6 +3,7 @@ const colors = {
   green: "#FF86EFAC",
   red: "#FFFCA5A5",
   purple: "#FFA78BFA",
+  orange: "#FFFDBA74",
   gray50: "#FFf8fafc",
   grey100: "#FFf1f5f9",
   grey200: "#FFe2e8f0",
