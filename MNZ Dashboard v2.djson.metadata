@@ -1,0 +1,19 @@
+{
+  "Category": null,
+  "Title": "MNZ Dashboard v2",
+  "Description": null,
+  "Author": "Simon Christensen",
+  "ScreenCount": 2.0,
+  "InGameScreensIndexs": [
+    0
+  ],
+  "IdleScreensIndexs": [],
+  "MainPreviewIndex": 0,
+  "IsOverlay": false,
+  "Width": 800.0,
+  "Height": 480.0,
+  "OverlaySizeWarning": false,
+  "MetadataVersion": 2.0,
+  "EnableOnDashboardMessaging": true,
+  "PitScreensIndexs": []
+}
