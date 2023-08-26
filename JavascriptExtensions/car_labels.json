@@ -2,6 +2,9 @@
   "TC1": {
     "cadillacvseriesrgtp": "GAIN",
     "bmwlmdh": "GAIN",
+
+    "dallarap217": "GAIN",
+
     "audir8gt3": "TC",
     "ferrarievogt3": "TC",
     "bmwm4gt3": "TC",
@@ -12,6 +15,8 @@
   },
   "TC2": {
     "cadillacvseriesrgtp": "SLIP",
-    "bmwlmdh": "SLIP"
+    "bmwlmdh": "SLIP",
+    
+    "dallarap217": "SLIP"
   }
 }
