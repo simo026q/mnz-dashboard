@@ -41,3 +41,10 @@ The following is a list of what the different labels on the dashboard mean. Some
 - **FARB** - Front anti-roll bar setting
 - **RARB** - Rear anti-roll bar setting
 - **ESP** - Power steering assist
+
+## Troubleshooting
+
+A list of known problems and solutions.
+
+### Some data values don't show
+- Try updating to the lastest version of SimHub
