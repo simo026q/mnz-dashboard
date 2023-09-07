@@ -1,17 +1,25 @@
 # MNZ Dashboard for SimHub & iRacing
 ## Installation
-1. Double click the `.simhubhash` file to import it into SimHub.
-2. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`.
+1. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
+2. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`. It's recommended to delete the old files when copied.
 
 ## Fully supported cars
 
-- GT3 *(excl. Ford GT3)*
+- GT3
+  - Audi R8 LMS
+  - BMW M4 GT3
+  - Ferrari 488 GT3 EVO (maintained)
+  - **[NEW]** Ferrari 296 GT3
+  - Lamborghini Huracan GT3 EVO
+  - McLaren MP4 GT3
+  - Mercedes AMG GT3 Evo
+  - Porsche 911 GT3 R (992)
 - LMP2
 - GTP/LMDh
-  - Acura ARX-06
+  - **[NEW]** Acura ARX-06
   - Cadillac V-Series.R
   - BMW M Hybrid V8
-  - Porsche 963
+  - **[NEW]** Porsche 963
 
 It may work with other cars, but these are the ones that will be tested for new releases and added new features to. If you want to request a car to be added, please [open an issue](https://github.com/simo026q/mnz-dashboard/issues/new) and it might be added if enough people want it.
 
@@ -52,4 +60,4 @@ The following is a list of what the different labels on the dashboard mean. Some
 A list of known problems and solutions.
 
 ### Some data values don't show
-- Try updating to the lastest version of SimHub
+- Try updating to the latest version of SimHub and the dashboard. Dashboards are always tested with the latest version of SimHub available before release.
