@@ -1,4 +1,7 @@
 # MNZ Dashboard for SimHub & iRacing
+
+![MNZ Dashboard](MNZ%20Dashboard%20v2.djson.png "MNZ Dashboard")
+
 ## Installation
 1. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
 2. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`. It's recommended to delete the old files when copied.
