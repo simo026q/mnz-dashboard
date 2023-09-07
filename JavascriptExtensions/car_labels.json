@@ -9,6 +9,7 @@
 
     "audir8gt3": "TC",
     "ferrarievogt3": "TC",
+    "ferrari296gt3": "TC",
     "bmwm4gt3": "TC",
     "lamborghinievogt3": "TC",
     "mclarenmp4": "TC",
@@ -26,6 +27,7 @@
   "SHPE": {
     "audir8gt3": "MAP",
     "ferrarievogt3": "MAP",
+    "ferrari296gt3": "MAP",
     "bmwm4gt3": "MAP",
     "lamborghinievogt3": "MAP",
     "mclarenmp4": "MAP",
