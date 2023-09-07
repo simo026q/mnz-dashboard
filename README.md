@@ -30,7 +30,8 @@ The following is a list of what the different labels on the dashboard mean. Some
 - **POS** - Current class position / Total class opponents
 - **CURR** - Current lap time
 - **LAST** - Last lap time
-- **SBST** - Personal session best lap time
+- **PBST** - Personal session best lap time
+- **SBST** - Session overall best lap time
 - **SPD** - Speed in local unit
 - **THR** - Throttle Input (0-100)
 - **CLUT** - Clutch Input (0-100)

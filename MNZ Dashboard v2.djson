@@ -5,7 +5,7 @@
   "DashboardDebugManager": {
     "WindowPositionSettings": {
       "IsFullScreen": false,
-      "Position": "26,26,1000,600",
+      "Position": "1414,575,1000,600",
       "TopMost": false,
       "AllowTransparency": false,
       "CloseOnMonitorLoss": false,
@@ -898,7 +898,7 @@
                   "FontWeight": "Light",
                   "FontSize": 50.0,
                   "Text": "--:--.---",
-                  "TextColor": "#FFA78BFA",
+                  "TextColor": "#FFFFFFFF",
                   "HorizontalAlignment": 2,
                   "VerticalAlignment": 1,
                   "BackgroundColor": "#00FFFFFF",
@@ -907,7 +907,7 @@
                   "Top": 252.0,
                   "Visible": true,
                   "Width": 256.0,
-                  "Name": "Data_SessionBestLaptime",
+                  "Name": "Data_PersonalBestLaptime",
                   "Bindings": {
                     "Text": {
                       "FormatString": "mm\\:ss\\.fff",
@@ -925,22 +925,32 @@
                   "Font": "Roboto",
                   "FontWeight": "Medium",
                   "FontSize": 20.0,
-                  "Text": "SBST",
+                  "Text": "PBST",
                   "TextColor": "#FF0F172A",
                   "HorizontalAlignment": 1,
                   "VerticalAlignment": 1,
-                  "BackgroundColor": "#FFA78BFA",
+                  "BackgroundColor": "#FFCBD5E1",
                   "Height": 22.0,
                   "Left": 712.0,
                   "Top": 230.0,
                   "Visible": true,
                   "Width": 56.0,
-                  "Name": "Label_SessionBestLaptime"
+                  "Name": "Label_PersonalBestLaptime",
+                  "Bindings": {
+                    "BackgroundColor": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "return \"#FFCBD5E1\";\r\n\r\n//return $prop('GameRawData.Telemetry.LapBestLapTime') != 0 && $prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime') == 0 ? \"#FFA78BFA\" : \"#FFCBD5E1\""
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "BackgroundColor"
+                    }
+                  }
                 }
               ],
               "Group": false,
               "Visible": true,
-              "Name": "Laptime_SessionBest"
+              "Name": "Laptime_PersonalBest"
             },
             {
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
@@ -979,7 +989,7 @@
                     "TextColor": {
                       "Formula": {
                         "Interpreter": 1,
-                        "Expression": "return $prop('GameRawData.Telemetry.LapBestLapTime') != 0 && $prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime') == 0 ? \"#FFA78BFA\" : \"#FFFFFFFF\""
+                        "Expression": "return $prop('GameRawData.Telemetry.LapBestLapTime') != 0 && $prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime') == 0 ? colors.green : \"#FFFFFFFF\""
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
@@ -1051,7 +1061,7 @@
                     "BackgroundColor": {
                       "Formula": {
                         "Interpreter": 1,
-                        "Expression": "return $prop('GameRawData.Telemetry.LapBestLapTime') != 0 && $prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime') == 0 ? \"#FFA78BFA\" : \"#FFCBD5E1\""
+                        "Expression": "return $prop('GameRawData.Telemetry.LapBestLapTime') != 0 && $prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime') == 0 ? colors.green : \"#FFCBD5E1\""
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
