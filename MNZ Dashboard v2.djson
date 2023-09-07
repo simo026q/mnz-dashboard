@@ -3,11 +3,17 @@
     "DashboardVariables": []
   },
   "DashboardDebugManager": {
-    "LastPlacement": "197,547,703,422",
-    "Maximized": false
+    "WindowPositionSettings": {
+      "IsFullScreen": false,
+      "Position": "26,26,1000,600",
+      "TopMost": false,
+      "AllowTransparency": false,
+      "CloseOnMonitorLoss": false,
+      "NoWindowActivate": false
+    }
   },
   "Version": 2,
-  "Id": "00135b5c-def6-4d52-923a-71b3392a4dbb",
+  "Id": "33ee64bb-a24e-4769-947c-63379c9ee02a",
   "BaseHeight": 480,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -2987,6 +2993,116 @@
           "Name": "Pedal input"
         }
       ]
+    },
+    {
+      "Name": "Lap summary",
+      "InGameScreen": false,
+      "IdleScreen": false,
+      "PitScreen": false,
+      "ScreenId": "56d1d2a6-70d6-4dab-932b-a0bd80353474",
+      "AllowOverlays": true,
+      "IsForegroundLayer": false,
+      "IsOverlayLayer": true,
+      "OverlayTriggerExpression": {
+        "Expression": "([SessionTypeName] == 'Practice' || [SessionTypeName] == 'Qualifying') && [GameRawData.Telemetry.LapCurrentLapTime] < 10"
+      },
+      "ScreenEnabledExpression": {
+        "Expression": ""
+      },
+      "OverlayMaxDuration": 0,
+      "OverlayMinDuration": 0,
+      "IsBackgroundLayer": false,
+      "BackgroundColor": "#00FFFFFF",
+      "Items": [
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+          "Top": 0.0,
+          "Left": 488.0,
+          "Height": 326.0,
+          "Width": 312.0,
+          "BackgroundColor": "#00FFFFFF",
+          "Childrens": [
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "BackgroundColor": "#FFFFFFFF",
+              "Height": 326.0,
+              "Left": 488.0,
+              "Top": 0.0,
+              "Visible": true,
+              "Width": 312.0,
+              "Name": "Background"
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "Roboto",
+              "FontWeight": "Medium",
+              "FontSize": 20.0,
+              "Text": "0.000",
+              "TextColor": "#FF0F172A",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#FFFFFFFF",
+              "Height": 22.0,
+              "Left": 616.0,
+              "Top": 196.0,
+              "Visible": true,
+              "Width": 56.0,
+              "Name": "Label_LastLaptime",
+              "Bindings": {
+                "Text": {
+                  "Formula": {
+                    "Interpreter": 1,
+                    "Expression": "var value = Math.abs($prop('GameRawData.Telemetry.LapLastLapTime') - $prop('GameRawData.Telemetry.LapBestLapTime'));\r\n\r\nreturn getFourDigitDecimal(value);"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "BackgroundColor": {
+                  "Formula": {
+                    "Interpreter": 1,
+                    "Expression": "var delta = $prop('GameRawData.Telemetry.LapLastLapTime') - $prop('GameRawData.Telemetry.LapBestLapTime');\r\n\r\nreturn getDeltaColor(delta);"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "Roboto",
+              "FontWeight": "Light",
+              "FontSize": 70.0,
+              "Text": "0:00.000",
+              "TextColor": "#FF1E293B",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#00FFFFFF",
+              "Height": 96.0,
+              "Left": 488.0,
+              "Top": 108.0,
+              "Visible": true,
+              "Width": 312.0,
+              "Name": "Data_LastLaptime",
+              "Bindings": {
+                "Text": {
+                  "FormatString": "m\\.ss\\.fff",
+                  "Formula": {
+                    "Expression": "[LastLapTime]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                }
+              }
+            }
+          ],
+          "Group": false,
+          "Visible": true,
+          "Name": "Summary"
+        }
+      ]
     }
   ],
   "SnapToGrid": false,
@@ -2995,13 +3111,13 @@
   "ForegroundOpacity": 100.0,
   "ShowBackground": true,
   "BackgroundOpacity": 100.0,
-  "ShowBoundingRectangles": false,
+  "ShowBoundingRectangles": true,
   "GridSize": 10,
   "Images": [],
   "Metadata": {
     "Title": "MNZ Dashboard v2",
     "Author": "Simon Christensen",
-    "ScreenCount": 10.0,
+    "ScreenCount": 11.0,
     "InGameScreensIndexs": [
       0
     ],
