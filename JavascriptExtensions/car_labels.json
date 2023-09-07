@@ -1,7 +1,9 @@
 {
   "TC1": {
+    "acuraarx06gtp": "GAIN",
     "cadillacvseriesrgtp": "GAIN",
     "bmwlmdh": "GAIN",
+    "porsche963gtp": "GAIN",
 
     "dallarap217": "GAIN",
 
@@ -14,9 +16,11 @@
     "porsche992rgt3": "TC"
   },
   "TC2": {
+    "acuraarx06gtp": "SLIP",
     "cadillacvseriesrgtp": "SLIP",
     "bmwlmdh": "SLIP",
-    
+    "porsche963gtp": "SLIP",
+
     "dallarap217": "SLIP"
   },
   "SHPE": {

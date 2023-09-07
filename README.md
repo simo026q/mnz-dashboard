@@ -7,7 +7,11 @@
 
 - GT3 *(excl. Ford GT3)*
 - LMP2
-- GTP
+- GTP/LMDh
+  - Acura ARX-06
+  - Cadillac V-Series.R
+  - BMW M Hybrid V8
+  - Porsche 963
 
 It may work with other cars, but these are the ones that will be tested for new releases and added new features to. If you want to request a car to be added, please [open an issue](https://github.com/simo026q/mnz-dashboard/issues/new) and it might be added if enough people want it.
 
