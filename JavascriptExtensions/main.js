@@ -4,6 +4,7 @@ const colors = {
   red: "#FFFCA5A5",
   purple: "#FFA78BFA",
   orange: "#FFFDBA74",
+  white: "#FFFFFFFF",
   gray50: "#FFf8fafc",
   grey100: "#FFf1f5f9",
   grey200: "#FFe2e8f0",
@@ -57,6 +58,10 @@ function getFourDigitDecimal(value) {
   else {
     return value.toFixed(0);
   }
+}
+
+function getOverallBestLaptime() {
+  return driverbestlap($prop('DataCorePlugin.GameData.BestLapOpponentPosition')+1);
 }
 
 // Deprecated
