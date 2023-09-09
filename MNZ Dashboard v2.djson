@@ -2005,7 +2005,7 @@
             }
           ],
           "Group": false,
-          "Visible": true,
+          "Visible": false,
           "Name": "Summary"
         }
       ]
