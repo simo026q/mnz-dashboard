@@ -5,7 +5,7 @@ const colors = {
   purple: "#FFA78BFA",
   orange: "#FFFDBA74",
   white: "#FFFFFFFF",
-  gray50: "#FFf8fafc",
+  grey50: "#FFf8fafc",
   grey100: "#FFf1f5f9",
   grey200: "#FFe2e8f0",
   grey300: "#FFcbd5e1",
