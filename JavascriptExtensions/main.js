@@ -42,7 +42,9 @@ function getTextSuffixLeftPos(value, baseLength, basePos, multiplier) {
 function getDeltaColor(value) {
   return value > 0
     ? colors.red
-    : colors.green;
+    : value < 0 
+    ? colors.green
+    : colors.grey300;
 }
 
 function getFourDigitDecimal(value) {
