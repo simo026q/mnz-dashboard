@@ -3,8 +3,8 @@
 ![MNZ Dashboard](Screenshots/mnz-v2.0.0-beta.2_screenshot-1.png "MNZ Dashboard")
 
 ## Installation
-1. Download the latest release from [here](https://github.com/simo026q/mnz-dashboard/releases).
-2. If you are installing the dashboard for the first time then you need to install the fonts in the `Font` folder. Select them all and then right click and select `Install`. You can also download the font from [Google Fonts](https://fonts.google.com/specimen/Roboto).
+1. Download the latest release from [**Here**](https://github.com/simo026q/mnz-dashboard/releases).
+2. If you are installing the dashboard for the first time then you need to install the fonts in the `Font` folder. Select them all and then right click and select `Install`. You can also download the font from [**Google Fonts**](https://fonts.google.com/specimen/Roboto).
 3. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
 4. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`. It's recommended to delete the old files when copied.
 
@@ -26,7 +26,7 @@
   - BMW M Hybrid V8
   - **[NEW]** Porsche 963
 
-It may work with other cars, but these are the ones that will be tested for new releases and added new features to. If you want to request a car to be added, please [open an issue](https://github.com/simo026q/mnz-dashboard/issues/new) and it might be added if enough people want it.
+It may work with other cars, but these are the ones that will be tested for new releases and added new features to. If you want to request a car to be added, please [**Open an Issue**](https://github.com/simo026q/mnz-dashboard/issues/new) and it might be added if enough people want it.
 
 ## Labels
 
