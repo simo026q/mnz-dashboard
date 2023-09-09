@@ -3,8 +3,10 @@
 ![MNZ Dashboard](Screenshots/mnz-v2.0.0-beta.2_screenshot-1.png "MNZ Dashboard")
 
 ## Installation
-1. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
-2. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`. It's recommended to delete the old files when copied.
+1. Download the latest release from [here](https://github.com/simo026q/mnz-dashboard/releases).
+2. If you are installing the dashboard for the first time then you need to install the fonts in the `Font` folder. Select them all and then right click and select `Install`. You can also download the font from [Google Fonts](https://fonts.google.com/specimen/Roboto).
+3. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
+4. Move the files from `C:\Program Files (x86)\SimHub\DashTemplates\MNZ Dashboard v2\JavascriptExtensions` into `C:\Program Files (x86)\SimHub\JavascriptExtensions`. It's recommended to delete the old files when copied.
 
 ## Fully supported cars
 
