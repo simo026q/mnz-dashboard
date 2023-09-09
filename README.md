@@ -1,6 +1,6 @@
 # MNZ Dashboard for SimHub & iRacing
 
-![MNZ Dashboard](MNZ%20Dashboard%20v2.djson.png "MNZ Dashboard")
+![MNZ Dashboard](Screenshots/mnz-v2.0.0-beta.2_screenshot-1.png "MNZ Dashboard")
 
 ## Installation
 1. Double click the `.simhubhash` file to import it into SimHub. Otherwise, open SimHub and go to `Dash Studio > Import Dashboard` and select the `.simhubhash` file.
@@ -64,3 +64,8 @@ A list of known problems and solutions.
 
 ### Some data values don't show
 - Try updating to the latest version of SimHub and the dashboard. Dashboards are always tested with the latest version of SimHub available before release.
+
+## Screenshots
+
+![MNZ Dashboard](Screenshots/mnz-v2.0.0-beta.2_screenshot-2.png "MNZ Dashboard")
+![MNZ Dashboard](Screenshots/mnz-v2.0.0-beta.2_screenshot-3.png "MNZ Dashboard")
