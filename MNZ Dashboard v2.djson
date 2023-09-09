@@ -13,7 +13,7 @@
     }
   },
   "Version": 2,
-  "Id": "59718c50-87a2-4585-9069-bcc8788ed4d8",
+  "Id": "1ddf5489-ab1e-4300-8593-498705ed0530",
   "BaseHeight": 480,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -3022,7 +3022,8 @@
       "IsForegroundLayer": false,
       "IsOverlayLayer": true,
       "OverlayTriggerExpression": {
-        "Expression": "([SessionTypeName] == 'Practice' || [SessionTypeName] == 'Qualifying') && [GameRawData.Telemetry.LapCurrentLapTime] < 5"
+        "Interpreter": 1,
+        "Expression": "const sessionName = $prop('SessionTypeName');\r\n\r\nreturn (sessionName == 'Practice' || sessionName.includes('Qualify')) && $prop('GameRawData.Telemetry.LapLastLapTime') != 0 && $prop('GameRawData.Telemetry.LapCurrentLapTime') < 5;"
       },
       "ScreenEnabledExpression": {
         "Expression": ""
