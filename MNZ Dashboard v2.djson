@@ -5,7 +5,7 @@
   "DashboardDebugManager": {
     "WindowPositionSettings": {
       "IsFullScreen": false,
-      "Position": "180,727,669,402",
+      "Position": "43,729,669,402",
       "TopMost": false,
       "AllowTransparency": false,
       "CloseOnMonitorLoss": false,
@@ -952,6 +952,50 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    }
+                  }
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "Roboto",
+                  "FontWeight": "Medium",
+                  "FontSize": 20.0,
+                  "Text": "0.000",
+                  "TextColor": "#FF0F172A",
+                  "HorizontalAlignment": 1,
+                  "VerticalAlignment": 1,
+                  "BackgroundColor": "#FFCBD5E1",
+                  "Height": 22.0,
+                  "Left": 648.0,
+                  "Top": 230.0,
+                  "Visible": true,
+                  "Width": 56.0,
+                  "Name": "Data_Delta",
+                  "Bindings": {
+                    "BackgroundColor": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "const delta = driverdeltatobest($prop('Position'));\r\n\r\nreturn getDeltaColor(delta);"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Text": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "var delta = Math.abs(driverdeltatobest($prop('Position')));\r\n\r\nreturn getFourDigitDecimal(delta);"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Text"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "const delta = driverdeltatobest($prop('Position'));\r\n\r\nreturn delta != null && delta != 0;"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 }
