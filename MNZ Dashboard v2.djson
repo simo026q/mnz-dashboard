@@ -5,7 +5,7 @@
   "DashboardDebugManager": {
     "WindowPositionSettings": {
       "IsFullScreen": false,
-      "Position": "113,868,669,402",
+      "Position": "180,727,669,402",
       "TopMost": false,
       "AllowTransparency": false,
       "CloseOnMonitorLoss": false,
@@ -778,7 +778,7 @@
                 "Visible": {
                   "Formula": {
                     "Interpreter": 1,
-                    "Expression": "return $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 1.5"
+                    "Expression": "const remaining = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');\r\n\r\nreturn remaining < 1.5 && remaining > 0;"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -835,7 +835,7 @@
                   "BorderColor": {
                     "Formula": {
                       "Interpreter": 1,
-                      "Expression": "return $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 1.5\r\n\t? colors.orange\r\n\t: colors.blue;"
+                      "Expression": "const remaining = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');\r\n\r\nreturn remaining < 1.5 && remaining > 0\r\n\t? colors.orange\r\n\t: colors.blue;"
                     },
                     "Mode": 2,
                     "TargetPropertyName": "BorderColor"
@@ -1676,7 +1676,7 @@
                         "TextColor": {
                           "Formula": {
                             "Interpreter": 1,
-                            "Expression": "return $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 1.5\r\n\t? colors.orange\r\n\t: \"#FFFFFFFF\";"
+                            "Expression": "const remaining = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');\r\n\r\nreturn remaining < 1.5 && remaining > 0\r\n\t? colors.orange\r\n\t: colors.white;"
                           },
                           "Mode": 2,
                           "TargetPropertyName": "TextColor"
@@ -1705,7 +1705,7 @@
                         "BackgroundColor": {
                           "Formula": {
                             "Interpreter": 1,
-                            "Expression": "return $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 1.5\r\n\t? colors.orange\r\n\t: colors.grey300;"
+                            "Expression": "const remaining = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');\r\n\r\nreturn remaining < 1.5 && remaining > 0\r\n\t? colors.orange\r\n\t: colors.grey300;"
                           },
                           "Mode": 2,
                           "TargetPropertyName": "BackgroundColor"
@@ -1713,7 +1713,7 @@
                         "BlinkEnabled": {
                           "Formula": {
                             "Interpreter": 1,
-                            "Expression": "return $prop('DataCorePlugin.Computed.Fuel_RemainingLaps') < 1.5"
+                            "Expression": "const remaining = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');\r\n\r\nreturn remaining < 1.5 && remaining > 0;"
                           },
                           "Mode": 2,
                           "TargetPropertyName": "BlinkEnabled"
