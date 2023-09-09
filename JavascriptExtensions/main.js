@@ -4,7 +4,8 @@ const colors = {
   red: "#FFFCA5A5",
   purple: "#FFA78BFA",
   orange: "#FFFDBA74",
-  gray50: "#FFf8fafc",
+  white: "#FFFFFFFF",
+  grey50: "#FFf8fafc",
   grey100: "#FFf1f5f9",
   grey200: "#FFe2e8f0",
   grey300: "#FFcbd5e1",
@@ -41,7 +42,9 @@ function getTextSuffixLeftPos(value, baseLength, basePos, multiplier) {
 function getDeltaColor(value) {
   return value > 0
     ? colors.red
-    : colors.green;
+    : value < 0 
+    ? colors.green
+    : colors.grey300;
 }
 
 function getFourDigitDecimal(value) {
@@ -57,6 +60,10 @@ function getFourDigitDecimal(value) {
   else {
     return value.toFixed(0);
   }
+}
+
+function getOverallBestLaptime() {
+  return driverbestlap($prop('DataCorePlugin.GameData.BestLapOpponentPosition')+1);
 }
 
 // Deprecated
