@@ -1916,7 +1916,14 @@
             {
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
               "IsRectangleItem": true,
-              "BackgroundColor": "#FFFFFFFF",
+              "BackgroundColor": "#FF1E293B",
+              "BorderStyle": {
+                "BorderColor": "#FF475569",
+                "BorderTop": 4,
+                "BorderBottom": 4,
+                "BorderLeft": 4,
+                "BorderRight": 4
+              },
               "Height": 326.0,
               "Left": 488.0,
               "Top": 0.0,
@@ -1985,6 +1992,14 @@
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "Formula": {
+                    "Interpreter": 1,
+                    "Expression": "const bestLapTime = $prop('GameRawData.Telemetry.LapBestLapTime');\r\nconst lastLapTime = $prop('GameRawData.Telemetry.LapLastLapTime');\r\nconst overallBestLapTime = getOverallBestLaptime();\r\nconst bestLapTimeFormatted = $prop('BestLapTime');\r\n\r\nif (bestLapTime != 0 && bestLapTime - lastLapTime == 0) {\r\n\tif (bestLapTimeFormatted == overallBestLapTime) {\r\n\t\treturn colors.purple;\r\n\t}\r\n\telse {\r\n\t\treturn colors.green;\r\n\t}\r\n}\r\nelse {\r\n\treturn colors.grey800;\r\n}"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "TextColor"
                 }
               }
             }
