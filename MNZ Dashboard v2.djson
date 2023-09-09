@@ -1260,7 +1260,7 @@
                           "FormatString": "",
                           "Formula": {
                             "Interpreter": 1,
-                            "Expression": "return $prop('GameRawData.Telemetry.PlayerCarClassPosition');"
+                            "Expression": "const pos = $prop('GameRawData.Telemetry.PlayerCarClassPosition');\r\n\r\nreturn (pos == 0) ? \"-\" : pos;"
                           },
                           "Mode": 2,
                           "TargetPropertyName": "Text"
