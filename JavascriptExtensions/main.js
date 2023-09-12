@@ -38,6 +38,46 @@ function getTextSuffixLeftPos(value, baseLength, basePos, multiplier) {
   return basePos + diff;
 }
 
+function getDriverPosition(relativePosition) {
+  const playerPosition = $prop('Position');
+
+  if (relativePosition < 0) {
+    return (playerPosition + relativePosition) < 1
+      ? -1
+      : playerPosition + relativePosition;
+  }
+  else if (relativePosition > 0) {
+    const opponentCount = $prop('OpponentsCount');
+
+    return (playerPosition + relativePosition) > opponentCount
+      ? -1
+      : playerPosition + relativePosition;
+  }
+  else {
+    return playerPosition;
+  }
+}
+
+function getDriverLastLapType(position) {
+  const bestLapTime = driverbestlap(position);
+  const lastLapTime = driverlastlap(position);
+  const overallBestLapTime = getOverallBestLaptime();
+
+  if (bestLapTime != '00:00:00' && bestLapTime == lastLapTime) {
+    if (bestLapTime == overallBestLapTime) {
+      // Overall best lap
+      return 'OB';
+    }
+    else {
+      // Personal best lap
+      return 'PB';
+    }
+  }
+  else {
+    return '';
+  }
+}
+
 /* ---- Laptime ---- */
 function getDeltaColor(value) {
   return value > 0

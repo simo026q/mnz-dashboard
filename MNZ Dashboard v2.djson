@@ -5,7 +5,7 @@
   "DashboardDebugManager": {
     "WindowPositionSettings": {
       "IsFullScreen": false,
-      "Position": "43,729,669,402",
+      "Position": "178,831,669,402",
       "TopMost": false,
       "AllowTransparency": false,
       "CloseOnMonitorLoss": false,
@@ -13,7 +13,7 @@
     }
   },
   "Version": 2,
-  "Id": "1ddf5489-ab1e-4300-8593-498705ed0530",
+  "Id": "4588f6e6-ebb8-443e-bf9f-3dbe2c6f094e",
   "BaseHeight": 480,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -1005,125 +1005,20 @@
               "Name": "Laptime_PersonalBest"
             },
             {
-              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
-              "Top": 131.0,
-              "Left": 512.0,
-              "Height": 83.0,
-              "Width": 256.0,
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+              "NextScreenCommand": 0,
+              "PreviousScreenCommand": 0,
+              "AutoSize": true,
+              "FileName": "Widget_LastLapTime.djson",
+              "InitialScreenIndex": 0,
+              "EnableScreenRolesAndActivation": true,
               "BackgroundColor": "#00FFFFFF",
-              "Childrens": [
-                {
-                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                  "IsTextItem": true,
-                  "Font": "Roboto",
-                  "FontWeight": "Light",
-                  "FontSize": 50.0,
-                  "Text": "--:--.---",
-                  "TextColor": "#FFFFFFFF",
-                  "HorizontalAlignment": 2,
-                  "VerticalAlignment": 1,
-                  "BackgroundColor": "#00FFFFFF",
-                  "Height": 61.0,
-                  "Left": 512.0,
-                  "Top": 153.0,
-                  "Visible": true,
-                  "Width": 256.0,
-                  "Name": "Data_LastLaptime",
-                  "Bindings": {
-                    "Text": {
-                      "FormatString": "mm\\:ss\\.fff",
-                      "Formula": {
-                        "Expression": "[LastLapTime]"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Text"
-                    },
-                    "TextColor": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "const bestLapTime = $prop('GameRawData.Telemetry.LapBestLapTime');\r\nconst lastLapTime = $prop('GameRawData.Telemetry.LapLastLapTime');\r\nconst overallBestLapTime = getOverallBestLaptime();\r\nconst bestLapTimeFormatted = $prop('BestLapTime');\r\n\r\nif (bestLapTime != 0 && bestLapTime - lastLapTime == 0) {\r\n\tif (bestLapTimeFormatted == overallBestLapTime) {\r\n\t\treturn colors.purple;\r\n\t}\r\n\telse {\r\n\t\treturn colors.green;\r\n\t}\r\n}\r\nelse {\r\n\treturn colors.white;\r\n}"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "TextColor"
-                    }
-                  }
-                },
-                {
-                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                  "IsTextItem": true,
-                  "Font": "Roboto",
-                  "FontWeight": "Medium",
-                  "FontSize": 20.0,
-                  "Text": "0.000",
-                  "TextColor": "#FF0F172A",
-                  "HorizontalAlignment": 1,
-                  "VerticalAlignment": 1,
-                  "BackgroundColor": "#FFCBD5E1",
-                  "Height": 22.0,
-                  "Left": 648.0,
-                  "Top": 131.0,
-                  "Visible": true,
-                  "Width": 56.0,
-                  "Name": "Data_Delta",
-                  "Bindings": {
-                    "BackgroundColor": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "var delta = $prop('GameRawData.Telemetry.LapLastLapTime') - $prop('GameRawData.Telemetry.LapBestLapTime');\r\n\r\nreturn getDeltaColor(delta);"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "BackgroundColor"
-                    },
-                    "Text": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "var value = Math.abs($prop('GameRawData.Telemetry.LapLastLapTime') - $prop('GameRawData.Telemetry.LapBestLapTime'));\r\n\r\nreturn getFourDigitDecimal(value);"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Text"
-                    },
-                    "Visible": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "return ($prop('GameRawData.Telemetry.LapBestLapTime') - $prop('GameRawData.Telemetry.LapLastLapTime')) != 0;"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Visible"
-                    }
-                  }
-                },
-                {
-                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                  "IsTextItem": true,
-                  "Font": "Roboto",
-                  "FontWeight": "Medium",
-                  "FontSize": 20.0,
-                  "Text": "LAST",
-                  "TextColor": "#FF0F172A",
-                  "HorizontalAlignment": 1,
-                  "VerticalAlignment": 1,
-                  "BackgroundColor": "#FFCBD5E1",
-                  "Height": 22.0,
-                  "Left": 712.0,
-                  "Top": 131.0,
-                  "Visible": true,
-                  "Width": 56.0,
-                  "Name": "Label_LastLaptime",
-                  "Bindings": {
-                    "BackgroundColor": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "const bestLapTime = $prop('GameRawData.Telemetry.LapBestLapTime');\r\nconst lastLapTime = $prop('GameRawData.Telemetry.LapLastLapTime');\r\nconst overallBestLapTime = getOverallBestLaptime();\r\nconst bestLapTimeFormatted = $prop('BestLapTime');\r\n\r\nif (bestLapTime != 0 && bestLapTime - lastLapTime == 0) {\r\n\tif (bestLapTimeFormatted == overallBestLapTime) {\r\n\t\treturn colors.purple;\r\n\t}\r\n\telse {\r\n\t\treturn colors.green;\r\n\t}\r\n}\r\nelse {\r\n\treturn colors.grey300;\r\n}"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "BackgroundColor"
-                    }
-                  }
-                }
-              ],
-              "Group": false,
+              "Height": 84.0,
+              "Left": 512.0,
+              "Top": 131.0,
               "Visible": true,
-              "Name": "Laptime_Last"
+              "Width": 256.0,
+              "Name": "LapTime_Last"
             },
             {
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
